@@ -1,0 +1,16 @@
+@import "tailwindcss";
+@theme {
+  --color-bistre: #251605;
+  --color-byzantium: #731963;
+  --color-aureolin: #F0E100;
+  --color-timberwolf: #CBD2D0;
+  --tw-container-center: true;
+  --tw-container-padding: 1rem;
+}
+.perspective-1000 {
+  perspective: 1000px;
+}
+
+.shadow-3xl {
+  box-shadow: 0 35px 60px -12px rgba(0, 0, 0, 0.25);
+}

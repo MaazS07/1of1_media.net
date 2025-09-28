@@ -1,0 +1,775 @@
+[
+  {
+    "id": "template-1742749384756",
+    "name": "Marketing Cold Caller",
+    "nodes": [
+      {
+        "id": "node-1742622989804",
+        "type": "CSV-Agent",
+        "position": {
+          "x": 751.8092994689941,
+          "y": 1821.28602206707
+        },
+        "data": {
+          "label": "CSV-Agent",
+          "inputs": [
+            {
+              "id": "input-1-1742622989804",
+              "name": "File",
+              "type": "none",
+              "fieldType": "input"
+            },
+            {
+              "id": "input-2-1742622989804",
+              "name": "Instructions",
+              "type": "string",
+              "fieldType": "input"
+            }
+          ],
+          "outputs": [
+            {
+              "id": "output-1-1742622989804",
+              "name": "Personal Description",
+              "type": "string",
+              "fieldType": "output"
+            },
+            {
+              "id": "output-2-1742622989804",
+              "name": "Receiver Emails",
+              "type": "string",
+              "fieldType": "output"
+            }
+          ]
+        }
+      },
+      {
+        "id": "node-1742622994671",
+        "type": "File-Input-Tool",
+        "position": {
+          "x": 755.809398651123,
+          "y": 1507.3337361812592
+        },
+        "data": {
+          "label": "File-Input-Tool",
+          "inputs": [
+            {
+              "id": "input-1-1742622994671",
+              "name": "File",
+              "type": "file",
+              "fieldType": "input"
+            }
+          ],
+          "outputs": [
+            {
+              "id": "output-1-1742622994671",
+              "name": "File",
+              "type": "file",
+              "fieldType": "output"
+            }
+          ]
+        }
+      },
+      {
+        "id": "node-1742627214535",
+        "type": "Voice-Agent",
+        "position": {
+          "x": 1238.003345489502,
+          "y": 1360.333595275879
+        },
+        "data": {
+          "label": "Voice-Agent",
+          "inputs": [
+            {
+              "id": "input-1-1742627214535",
+              "name": "Tools",
+              "type": "tool",
+              "fieldType": "none"
+            },
+            {
+              "id": "input-2-1742627214535",
+              "name": "STT",
+              "type": "string",
+              "fieldType": "input",
+              "options": [
+                "OpenAI",
+                "Google",
+                "Azure",
+                "Assembly AI"
+              ]
+            },
+            {
+              "id": "input-3-1742627214535",
+              "name": "TTS",
+              "type": "string",
+              "fieldType": "input",
+              "options": [
+                "OpenAI",
+                "ElevenLabs",
+                "Deepgram",
+                "Google"
+              ]
+            },
+            {
+              "id": "input-4-1742627214535",
+              "name": "Language",
+              "type": "string",
+              "fieldType": "input"
+            },
+            {
+              "id": "input-5-1742627214535",
+              "name": "Instructions",
+              "type": "none",
+              "fieldType": "input"
+            },
+            {
+              "id": "input-6-1742627214535",
+              "name": "To Phone Number",
+              "type": "string",
+              "fieldType": "input"
+            }
+          ],
+          "outputs": [
+            {
+              "id": "output-1-1742627214535",
+              "name": "Output",
+              "type": "string",
+              "fieldType": "output"
+            }
+          ]
+        }
+      },
+      {
+        "id": "node-1742627220632",
+        "type": "WhatsApp-Tool",
+        "position": {
+          "x": 757.7803975343704,
+          "y": 1301.110601425171
+        },
+        "data": {
+          "label": "WhatsApp-Tool",
+          "inputs": [],
+          "outputs": [
+            {
+              "id": "output-1-1742627220632",
+              "name": "Output",
+              "type": "string",
+              "fieldType": "output",
+              "display": false
+            }
+          ]
+        }
+      },
+      {
+        "id": "node-1742627321993",
+        "type": "End",
+        "position": {
+          "x": 1239.3299560546875,
+          "y": 1944.333999633789
+        },
+        "data": {
+          "label": "End",
+          "inputs": [
+            {
+              "id": "input-1-1742627321993",
+              "name": "End",
+              "type": "none",
+              "fieldType": "input"
+            }
+          ],
+          "outputs": []
+        }
+      }
+    ],
+    "edges": [
+      {
+        "id": "edge-1742621809241",
+        "source": "node-1742621807234",
+        "sourceHandle": "output-1-1742621807234",
+        "target": "node-1742621781999",
+        "targetHandle": "input-1-1742621781999"
+      },
+      {
+        "id": "edge-1742622148420",
+        "source": "node-1742621781999",
+        "sourceHandle": "output-1-1742621781999",
+        "target": "node-1742621907795",
+        "targetHandle": "input-1-1742621907795"
+      },
+      {
+        "id": "edge-1742622184839",
+        "source": "node-1742621907795",
+        "sourceHandle": "output-1-1742621907795",
+        "target": "node-1742622179281",
+        "targetHandle": "input-4-1742622179281"
+      },
+      {
+        "id": "edge-1742622372564",
+        "source": "node-1742621901931",
+        "sourceHandle": "output-1-1742621901931",
+        "target": "node-1742622352670",
+        "targetHandle": "input-2-1742622352670"
+      },
+      {
+        "id": "edge-1742623005692",
+        "source": "node-1742622994671",
+        "sourceHandle": "output-1-1742622994671",
+        "target": "node-1742622989804",
+        "targetHandle": "input-1-1742622989804"
+      },
+      {
+        "id": "edge-1742623070737",
+        "source": "node-1742622989804",
+        "sourceHandle": "output-2-1742622989804",
+        "target": "node-1742623066561",
+        "targetHandle": "input-4-1742623066561"
+      },
+      {
+        "id": "edge-1742627226668",
+        "source": "node-1742627220632",
+        "sourceHandle": "output-1-1742627220632",
+        "target": "node-1742627214535",
+        "targetHandle": "input-1-1742627214535"
+      },
+      {
+        "id": "edge-1742627287704",
+        "source": "node-1742622989804",
+        "sourceHandle": "output-1-1742622989804",
+        "target": "node-1742627214535",
+        "targetHandle": "input-5-1742627214535"
+      },
+      {
+        "id": "edge-1742627328574",
+        "source": "node-1742627214535",
+        "sourceHandle": "output-1-1742627214535",
+        "target": "node-1742627321993",
+        "targetHandle": "input-1-1742627321993"
+      }
+    ],
+    "createdAt": "2025-03-23T17:03:04.756Z"
+  },
+  {
+    "id": "template-1742749316601",
+    "name": "Email Marketing Workflow",
+    "nodes": [
+      {
+        "id": "node-1742622989804",
+        "type": "CSV-Agent",
+        "position": {
+          "x": 1071.4729614257812,
+          "y": 1301.2856998443604
+        },
+        "data": {
+          "label": "CSV-Agent",
+          "inputs": [
+            {
+              "id": "input-1-1742622989804",
+              "name": "File",
+              "type": "none",
+              "fieldType": "input"
+            },
+            {
+              "id": "input-2-1742622989804",
+              "name": "Instructions",
+              "type": "string",
+              "fieldType": "input"
+            }
+          ],
+          "outputs": [
+            {
+              "id": "output-1-1742622989804",
+              "name": "Personal Description",
+              "type": "string",
+              "fieldType": "output"
+            },
+            {
+              "id": "output-2-1742622989804",
+              "name": "Receiver Emails",
+              "type": "string",
+              "fieldType": "output"
+            }
+          ]
+        }
+      },
+      {
+        "id": "node-1742622994671",
+        "type": "File-Input-Tool",
+        "position": {
+          "x": 589.1423988342285,
+          "y": 1393.0000302791595
+        },
+        "data": {
+          "label": "File-Input-Tool",
+          "inputs": [
+            {
+              "id": "input-1-1742622994671",
+              "name": "File",
+              "type": "file",
+              "fieldType": "input"
+            }
+          ],
+          "outputs": [
+            {
+              "id": "output-1-1742622994671",
+              "name": "File",
+              "type": "file",
+              "fieldType": "output"
+            }
+          ]
+        }
+      },
+      {
+        "id": "node-1742623066561",
+        "type": "Email-Tool",
+        "position": {
+          "x": 1566.5709838867188,
+          "y": 1368.4287152290344
+        },
+        "data": {
+          "label": "Email-Tool",
+          "inputs": [
+            {
+              "id": "input-1-1742623066561",
+              "name": "Sender Mail",
+              "type": "string",
+              "fieldType": "input"
+            },
+            {
+              "id": "input-2-1742623066561",
+              "name": "Passkey",
+              "type": "string",
+              "fieldType": "input"
+            },
+            {
+              "id": "input-3-1742623066561",
+              "name": "Sender's Name",
+              "type": "string",
+              "fieldType": "input"
+            },
+            {
+              "id": "input-4-1742623066561",
+              "name": "Receiver Emails",
+              "type": "none",
+              "fieldType": "input"
+            },
+            {
+              "id": "input-5-1742623066562",
+              "name": "Email Description",
+              "type": "none",
+              "fieldType": "input"
+            }
+          ],
+          "outputs": [
+            {
+              "id": "output-1-1742623066562",
+              "name": "Status",
+              "type": "string",
+              "fieldType": "output"
+            }
+          ]
+        }
+      },
+      {
+        "id": "node-1742623076590",
+        "type": "Text-Agent",
+        "position": {
+          "x": 1063.0473192930222,
+          "y": 1714.9047050476074
+        },
+        "data": {
+          "label": "Text-Agent",
+          "inputs": [
+            {
+              "id": "input-1-1742623076590",
+              "name": "Tools",
+              "type": "tool",
+              "fieldType": "none"
+            },
+            {
+              "id": "input-2-1742623076590",
+              "name": "Instructions",
+              "type": "string",
+              "fieldType": "input"
+            },
+            {
+              "id": "input-2-1742623076590",
+              "name": "Query",
+              "type": "none",
+              "fieldType": "input"
+            },
+            {
+              "id": "input-3-1742623076590",
+              "name": "LLM",
+              "type": "string",
+              "fieldType": "input",
+              "options": [
+                "Groq",
+                "Gemini"
+              ]
+            },
+            {
+              "id": "input-4-1742623076590",
+              "name": "API Key",
+              "type": "string",
+              "fieldType": "input"
+            }
+          ],
+          "outputs": [
+            {
+              "id": "output-1-1742623076590",
+              "name": "Output",
+              "type": "string",
+              "fieldType": "output"
+            }
+          ]
+        }
+      },
+      {
+        "id": "node-1742623084647",
+        "type": "Text-Input-Tool",
+        "position": {
+          "x": 586.9559097290039,
+          "y": 1796.667151927948
+        },
+        "data": {
+          "label": "Text-Input-Tool",
+          "inputs": [
+            {
+              "id": "input-1-1742623084647",
+              "name": "Text",
+              "type": "string",
+              "fieldType": "input"
+            }
+          ],
+          "outputs": [
+            {
+              "id": "output-1-1742623084647",
+              "name": "Text",
+              "type": "string",
+              "fieldType": "output"
+            }
+          ]
+        }
+      },
+      {
+        "id": "node-1742623171311",
+        "type": "End",
+        "position": {
+          "x": 1552.7589721679688,
+          "y": 1952.0959777832031
+        },
+        "data": {
+          "label": "End",
+          "inputs": [
+            {
+              "id": "input-1-1742623171311",
+              "name": "End",
+              "type": "none",
+              "fieldType": "input"
+            }
+          ],
+          "outputs": []
+        }
+      }
+    ],
+    "edges": [
+      {
+        "id": "edge-1742621809241",
+        "source": "node-1742621807234",
+        "sourceHandle": "output-1-1742621807234",
+        "target": "node-1742621781999",
+        "targetHandle": "input-1-1742621781999"
+      },
+      {
+        "id": "edge-1742622148420",
+        "source": "node-1742621781999",
+        "sourceHandle": "output-1-1742621781999",
+        "target": "node-1742621907795",
+        "targetHandle": "input-1-1742621907795"
+      },
+      {
+        "id": "edge-1742622184839",
+        "source": "node-1742621907795",
+        "sourceHandle": "output-1-1742621907795",
+        "target": "node-1742622179281",
+        "targetHandle": "input-4-1742622179281"
+      },
+      {
+        "id": "edge-1742622372564",
+        "source": "node-1742621901931",
+        "sourceHandle": "output-1-1742621901931",
+        "target": "node-1742622352670",
+        "targetHandle": "input-2-1742622352670"
+      },
+      {
+        "id": "edge-1742623005692",
+        "source": "node-1742622994671",
+        "sourceHandle": "output-1-1742622994671",
+        "target": "node-1742622989804",
+        "targetHandle": "input-1-1742622989804"
+      },
+      {
+        "id": "edge-1742623070737",
+        "source": "node-1742622989804",
+        "sourceHandle": "output-2-1742622989804",
+        "target": "node-1742623066561",
+        "targetHandle": "input-4-1742623066561"
+      },
+      {
+        "id": "edge-1742623124404",
+        "source": "node-1742623084647",
+        "sourceHandle": "output-1-1742623084647",
+        "target": "node-1742623076590",
+        "targetHandle": "input-2-1742623076590"
+      },
+      {
+        "id": "edge-1742623128066",
+        "source": "node-1742622989804",
+        "sourceHandle": "output-1-1742622989804",
+        "target": "node-1742623076590",
+        "targetHandle": "input-1-1742623076590"
+      },
+      {
+        "id": "edge-1742623131530",
+        "source": "node-1742623076590",
+        "sourceHandle": "output-1-1742623076590",
+        "target": "node-1742623066561",
+        "targetHandle": "input-5-1742623066562"
+      },
+      {
+        "id": "edge-1742623185595",
+        "source": "node-1742623066561",
+        "sourceHandle": "output-1-1742623066562",
+        "target": "node-1742623171311",
+        "targetHandle": "input-1-1742623171311"
+      }
+    ],
+    "createdAt": "2025-03-23T17:01:56.601Z"
+  },
+  {
+    "id": "template-1749990000001",
+    "name": "CSV Agent Workflow",
+    "nodes": [
+      {
+        "id": "node-1749990001001",
+        "type": "File-Input-Tool",
+        "position": { "x": 600, "y": 1300 },
+        "data": {
+          "label": "File-Input-Tool",
+          "inputs": [ { "id": "input-1-1749990001001", "name": "File", "type": "file", "fieldType": "input" } ],
+          "outputs": [ { "id": "output-1-1749990001001", "name": "File", "type": "file", "fieldType": "output" } ]
+        }
+      },
+      {
+        "id": "node-1749990001002",
+        "type": "CSV-Agent",
+        "position": { "x": 1050, "y": 1300 },
+        "data": {
+          "label": "CSV-Agent",
+          "inputs": [
+            { "id": "input-1-1749990001002", "name": "File", "type": "none", "fieldType": "input" },
+            { "id": "input-2-1749990001002", "name": "Instructions", "type": "string", "fieldType": "input" },
+            { "id": "input-3-1749990001002", "name": "Query", "type": "string", "fieldType": "input" }
+          ],
+          "outputs": [
+            { "id": "output-1-1749990001002", "name": "Personal Description", "type": "string", "fieldType": "output" },
+            { "id": "output-2-1749990001002", "name": "Receiver Emails", "type": "string", "fieldType": "output" },
+            { "id": "output-3-1749990001002", "name": "Output", "type": "string", "fieldType": "output" }
+          ]
+        }
+      },
+      {
+        "id": "node-1749990001003",
+        "type": "Text-Input-Tool",
+        "position": { "x": 600, "y": 1700 },
+        "data": {
+          "label": "Text-Input-Tool",
+          "inputs": [ { "id": "input-1-1749990001003", "name": "Text", "type": "string", "fieldType": "input" } ],
+          "outputs": [ { "id": "output-1-1749990001003", "name": "Text", "type": "string", "fieldType": "output" } ]
+        }
+      },
+      {
+        "id": "node-1749990001004",
+        "type": "End",
+        "position": { "x": 1500, "y": 1700 },
+        "data": { "label": "End", "inputs": [ { "id": "input-1-1749990001004", "name": "End", "type": "none", "fieldType": "input" } ], "outputs": [] }
+      }
+    ],
+    "edges": [
+      {
+        "id": "edge-1749990002001",
+        "source": "node-1749990001001",
+        "sourceHandle": "output-1-1749990001001",
+        "target": "node-1749990001002",
+        "targetHandle": "input-1-1749990001002"
+      },
+      {
+        "id": "edge-1749990002002",
+        "source": "node-1749990001003",
+        "sourceHandle": "output-1-1749990001003",
+        "target": "node-1749990001002",
+        "targetHandle": "input-3-1749990001002"
+      },
+      {
+        "id": "edge-1749990002003",
+        "source": "node-1749990001002",
+        "sourceHandle": "output-3-1749990001002",
+        "target": "node-1749990001004",
+        "targetHandle": "input-1-1749990001004"
+      }
+    ],
+    "createdAt": "2025-08-20T12:00:00.000Z"
+  },
+  {
+    "id": "template-1749990000002",
+    "name": "Web Search Workflow",
+    "nodes": [
+      {
+        "id": "node-1749990002001",
+        "type": "Text-Input-Tool",
+        "position": { "x": 600, "y": 1200 },
+        "data": { "label": "Text-Input-Tool", "inputs": [ { "id": "input-1-1749990002001", "name": "Text", "type": "string", "fieldType": "input" } ], "outputs": [ { "id": "output-1-1749990002001", "name": "Text", "type": "string", "fieldType": "output" } ] }
+      },
+      {
+        "id": "node-1749990002002",
+        "type": "Web-Search-Tool",
+        "position": { "x": 950, "y": 1200 },
+        "data": { "label": "Web-Search-Tool", "inputs": [], "outputs": [ { "id": "output-1-1749990002002", "name": "Tool", "type": "string", "fieldType": "output", "display": false } ] }
+      },
+      {
+        "id": "node-1749990002003",
+        "type": "Text-Agent",
+        "position": { "x": 1250, "y": 1200 },
+        "data": {
+          "label": "Text-Agent",
+          "inputs": [
+            { "id": "input-1-1749990002003", "name": "Tools", "type": "tool", "fieldType": "none" },
+            { "id": "input-2-1749990002003", "name": "Instructions", "type": "string", "fieldType": "input" },
+            { "id": "input-3-1749990002003", "name": "Query", "type": "none", "fieldType": "input" },
+            { "id": "input-4-1749990002003", "name": "LLM", "type": "string", "fieldType": "input", "options": [ "Groq", "Gemini" ] },
+            { "id": "input-5-1749990002003", "name": "API Key", "type": "string", "fieldType": "input" }
+          ],
+          "outputs": [ { "id": "output-1-1749990002003", "name": "Output", "type": "string", "fieldType": "output" } ]
+        }
+      },
+      {
+        "id": "node-1749990002004",
+        "type": "End",
+        "position": { "x": 1550, "y": 1400 },
+        "data": { "label": "End", "inputs": [ { "id": "input-1-1749990002004", "name": "End", "type": "none", "fieldType": "input" } ], "outputs": [] }
+      }
+    ],
+    "edges": [
+      { "id": "edge-1749990003001", "source": "node-1749990002001", "sourceHandle": "output-1-1749990002001", "target": "node-1749990002003", "targetHandle": "input-3-1749990002003" },
+      { "id": "edge-1749990003002", "source": "node-1749990002002", "sourceHandle": "output-1-1749990002002", "target": "node-1749990002003", "targetHandle": "input-1-1749990002003" },
+      { "id": "edge-1749990003003", "source": "node-1749990002003", "sourceHandle": "output-1-1749990002003", "target": "node-1749990002004", "targetHandle": "input-1-1749990002004" }
+    ],
+    "createdAt": "2025-08-20T12:01:00.000Z"
+  },
+  {
+    "id": "template-1749990000003",
+    "name": "RAG Workflow",
+    "nodes": [
+      {
+        "id": "node-1749990003001",
+        "type": "Text-Input-Tool",
+        "position": { "x": 600, "y": 1000 },
+        "data": { "label": "Text-Input-Tool", "inputs": [ { "id": "input-1-1749990003001", "name": "Text", "type": "string", "fieldType": "input" } ], "outputs": [ { "id": "output-1-1749990003001", "name": "Text", "type": "string", "fieldType": "output" } ] }
+      },
+      {
+        "id": "node-1749990003002",
+        "type": "Knowledge-Base",
+        "position": { "x": 950, "y": 1000 },
+        "data": { "label": "Knowledge-Base", "inputs": [ { "id": "input-1-1749990003002", "name": "File", "type": "file", "fieldType": "input" } ], "outputs": [ { "id": "output-1-1749990003002", "name": "Content", "type": "string", "fieldType": "output", "display": false } ] }
+      },
+      {
+        "id": "node-1749990003003",
+        "type": "Text-Agent",
+        "position": { "x": 1250, "y": 1000 },
+        "data": {
+          "label": "Text-Agent",
+          "inputs": [
+            { "id": "input-1-1749990003003", "name": "Tools", "type": "tool", "fieldType": "none" },
+            { "id": "input-2-1749990003003", "name": "Instructions", "type": "string", "fieldType": "input" },
+            { "id": "input-3-1749990003003", "name": "Query", "type": "none", "fieldType": "input" },
+            { "id": "input-4-1749990003003", "name": "LLM", "type": "string", "fieldType": "input", "options": [ "Groq", "Gemini" ] },
+            { "id": "input-5-1749990003003", "name": "API Key", "type": "string", "fieldType": "input" }
+          ],
+          "outputs": [ { "id": "output-1-1749990003003", "name": "Output", "type": "string", "fieldType": "output" } ]
+        }
+      },
+      {
+        "id": "node-1749990003004",
+        "type": "End",
+        "position": { "x": 1550, "y": 1200 },
+        "data": { "label": "End", "inputs": [ { "id": "input-1-1749990003004", "name": "End", "type": "none", "fieldType": "input" } ], "outputs": [] }
+      }
+    ],
+    "edges": [
+      { "id": "edge-1749990004001", "source": "node-1749990003001", "sourceHandle": "output-1-1749990003001", "target": "node-1749990003003", "targetHandle": "input-3-1749990003003" },
+      { "id": "edge-1749990004002", "source": "node-1749990003002", "sourceHandle": "output-1-1749990003002", "target": "node-1749990003003", "targetHandle": "input-1-1749990003003" },
+      { "id": "edge-1749990004003", "source": "node-1749990003003", "sourceHandle": "output-1-1749990003003", "target": "node-1749990003004", "targetHandle": "input-1-1749990003004" }
+    ],
+    "createdAt": "2025-08-20T12:02:00.000Z"
+  },
+  {
+    "id": "template-1749990000004",
+    "name": "Text Agent Workflow",
+    "nodes": [
+      {
+        "id": "node-1749990004001",
+        "type": "Text-Input-Tool",
+        "position": { "x": 700, "y": 1900 },
+        "data": { "label": "Text-Input-Tool", "inputs": [ { "id": "input-1-1749990004001", "name": "Text", "type": "string", "fieldType": "input" } ], "outputs": [ { "id": "output-1-1749990004001", "name": "Text", "type": "string", "fieldType": "output" } ] }
+      },
+      {
+        "id": "node-1749990004002",
+        "type": "Text-Agent",
+        "position": { "x": 1100, "y": 1900 },
+        "data": {
+          "label": "Text-Agent",
+          "inputs": [
+            { "id": "input-1-1749990004002", "name": "Tools", "type": "tool", "fieldType": "none" },
+            { "id": "input-2-1749990004002", "name": "Instructions", "type": "string", "fieldType": "input" },
+            { "id": "input-3-1749990004002", "name": "Query", "type": "none", "fieldType": "input" },
+            { "id": "input-4-1749990004002", "name": "LLM", "type": "string", "fieldType": "input", "options": [ "Groq", "Gemini" ] },
+            { "id": "input-5-1749990004002", "name": "API Key", "type": "string", "fieldType": "input" }
+          ],
+          "outputs": [ { "id": "output-1-1749990004002", "name": "Output", "type": "string", "fieldType": "output" } ]
+        }
+      },
+      {
+        "id": "node-1749990004003",
+        "type": "End",
+        "position": { "x": 1500, "y": 2000 },
+        "data": { "label": "End", "inputs": [ { "id": "input-1-1749990004003", "name": "End", "type": "none", "fieldType": "input" } ], "outputs": [] }
+      }
+    ],
+    "edges": [
+      { "id": "edge-1749990005001", "source": "node-1749990004001", "sourceHandle": "output-1-1749990004001", "target": "node-1749990004002", "targetHandle": "input-3-1749990004002" },
+      { "id": "edge-1749990005002", "source": "node-1749990004002", "sourceHandle": "output-1-1749990004002", "target": "node-1749990004003", "targetHandle": "input-1-1749990004003" }
+    ],
+    "createdAt": "2025-08-20T12:03:00.000Z"
+  },
+  {
+    "id": "template-1749990000005",
+    "name": "Zoom Agent",
+    "nodes": [
+      {
+        "id": "node-1749990005001",
+        "type": "Zoom-Tool",
+        "position": { "x": 900, "y": 800 },
+        "data": { "label": "Zoom-Tool", "inputs": [ { "id": "input-1-1749990005001", "name": "Query", "type": "string", "fieldType": "input" } ], "outputs": [ { "id": "output-1-1749990005001", "name": "Output", "type": "string", "fieldType": "output", "display": false } ] }
+      },
+      {
+        "id": "node-1749990005002",
+        "type": "End",
+        "position": { "x": 1300, "y": 900 },
+        "data": { "label": "End", "inputs": [ { "id": "input-1-1749990005002", "name": "End", "type": "none", "fieldType": "input" } ], "outputs": [] }
+      }
+    ],
+    "edges": [
+      { "id": "edge-1749990006001", "source": "node-1749990005001", "sourceHandle": "output-1-1749990005001", "target": "node-1749990005002", "targetHandle": "input-1-1749990005002" }
+    ],
+    "createdAt": "2025-08-20T12:04:00.000Z"
+  }
+]
